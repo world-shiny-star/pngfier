@@ -1,5 +1,5 @@
 <#
-    Script: PNGify - Complete Version
+    Script: PNGifier- Complete Version
     By: world Shiny star
     Description: Extracts base64-encoded images (PNG, JPEG, GIF, WebP) from files
                  and saves them with proper metadata and organization.
@@ -222,3 +222,4 @@ do {
 Write-Host "`nThank you for using PNGify! Goodbye." -ForegroundColor Cyan
 
 Start-Sleep -Seconds 1
+
