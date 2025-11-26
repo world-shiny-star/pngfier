@@ -1,16 +1,11 @@
 <#
     Script: PNGify - Complete Version
-    By: Stephen Chapman (Enhanced)
-    Site: http://dsasmblr.com/blog
-    GitHub: http://github.com/dsasmblr
-    
+    By: world Shiny star
     Description: Extracts base64-encoded images (PNG, JPEG, GIF, WebP) from files
                  and saves them with proper metadata and organization.
 #>
 
-#-----------------#
-# -- FUNCTIONS -- #
-#-----------------#
+
 
 # Script header
 Function Show-Header {
@@ -130,7 +125,6 @@ Function Extract-Images {
     return $count
 }
 
-# Create output directory with conflict handling
 Function New-OutputDirectory {
     param([string]$BaseName)
     
@@ -166,9 +160,6 @@ Function New-OutputDirectory {
     return $dirName
 }
 
-#--------------------------#
-# -- SCRIPT ENTRY POINT -- #
-#--------------------------#
 
 # Main execution loop
 $storedPath = ""
@@ -229,4 +220,5 @@ do {
 } while ($response.ToUpper() -eq "Y")
 
 Write-Host "`nThank you for using PNGify! Goodbye." -ForegroundColor Cyan
+
 Start-Sleep -Seconds 1
