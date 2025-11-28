@@ -1,1 +1,153 @@
-what evr for now
+{
+  "applicationInfo": {
+    "name": "Auto Cleanup Monitor",
+    "version": "1.0.0",
+    "author": "Your Name",
+    "description": "Automated download folder monitor with image extraction and duplicate removal",
+    "lastModified": "2024-11-28"
+  },
+  
+  "monitoring": {
+    "watch_folder": "C:\\Users\\YourName\\Downloads",
+    "include_subfolders": false,
+    "check_interval_seconds": 5,
+    "auto_start": false,
+    "file_extensions": [
+      ".py",
+      ".ps1",
+      ".json"
+    ]
+  },
+  
+  "scripts": {
+    "pngify_script": "C:\\Scripts\\PNGify.ps1",
+    "duplicate_script": "C:\\Scripts\\DuplicateFinder.ps1",
+    "execution_policy": "Bypass",
+    "timeout_seconds": 300,
+    "run_in_background": true
+  },
+  
+  "processing": {
+    "auto_extract_images": true,
+    "auto_remove_duplicates": true,
+    "create_backup_before_delete": true,
+    "backup_location": "C:\\Backups\\AutoCleanup",
+    "max_file_size_mb": 100,
+    "skip_hidden_files": true,
+    "process_delay_seconds": 2
+  },
+  
+  "output": {
+    "output_directory": "C:\\ProcessedFiles",
+    "organize_by_date": true,
+    "create_subdirectories": true,
+    "naming_pattern": "{original_name}_{timestamp}",
+    "keep_original_files": true
+  },
+  
+  "notifications": {
+    "enabled": true,
+    "desktop_notifications": true,
+    "play_sound": false,
+    "sound_file": "",
+    "email_alerts": false,
+    "email_settings": {
+      "smtp_server": "",
+      "smtp_port": 587,
+      "sender_email": "",
+      "recipient_email": "",
+      "use_tls": true
+    }
+  },
+  
+  "logging": {
+    "enable_logging": true,
+    "log_level": "INFO",
+    "log_file": "C:\\Logs\\cleanup_monitor.log",
+    "max_log_size_mb": 10,
+    "log_rotation": true,
+    "console_output": true
+  },
+  
+  "statistics": {
+    "track_statistics": true,
+    "save_history": true,
+    "history_file": "C:\\Logs\\statistics_history.json",
+    "reset_on_startup": false,
+    "export_format": "json"
+  },
+  
+  "ui": {
+    "theme": "dark",
+    "language": "en",
+    "window_settings": {
+      "width": 900,
+      "height": 700,
+      "start_maximized": false,
+      "start_minimized": false,
+      "always_on_top": false
+    },
+    "font": {
+      "family": "Segoe UI",
+      "size": 10,
+      "console_font": "Consolas"
+    },
+    "colors": {
+      "primary": "#1e88e5",
+      "success": "#4caf50",
+      "warning": "#ffc107",
+      "error": "#f44336",
+      "background": "#2b2b2b"
+    }
+  },
+  
+  "advanced": {
+    "threading": {
+      "max_worker_threads": 4,
+      "queue_size": 100
+    },
+    "performance": {
+      "enable_caching": true,
+      "cache_size_mb": 50,
+      "optimize_memory": true
+    },
+    "security": {
+      "verify_file_signatures": false,
+      "scan_for_malware": false,
+      "quarantine_suspicious_files": false
+    }
+  },
+  
+  "filters": {
+    "exclude_patterns": [
+      "*.tmp",
+      "*.temp",
+      "~*",
+      ".git*"
+    ],
+    "include_only_patterns": [],
+    "min_file_size_kb": 1,
+    "max_file_size_mb": 500,
+    "exclude_directories": [
+      "node_modules",
+      ".git",
+      "__pycache__"
+    ]
+  },
+  
+  "userPreferences": {
+    "remember_last_folder": true,
+    "confirm_before_delete": true,
+    "show_preview": true,
+    "auto_save_settings": true,
+    "check_for_updates": true
+  },
+  
+  "shortcuts": {
+    "start_monitoring": "Ctrl+S",
+    "stop_monitoring": "Ctrl+X",
+    "manual_cleanup": "Ctrl+M",
+    "open_settings": "Ctrl+,",
+    "quit_application": "Ctrl+Q"
+  }
+}
